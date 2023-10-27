@@ -1,33 +1,5 @@
 <?php
 
-
-/*
- * curl https://api.openai.com/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $OPENAI_API_KEY" \
-  -d '{
-  "model": "gpt-3.5-turbo",
-  "messages": [
-    {
-      "role": "user",
-      "content": "Bonjour, comment vas-tu ?"
-    },
-    {
-      "role": "assistant",
-      "content": "Bonjour ! Je suis une IA et je n'\''ai pas d'\''émotions, mais je suis là pour t'\''aider. Comment puis-je t'\''assister aujourd'\''hui ?"
-    },
-    {
-      "role": "user",
-      "content": "J'\''aimerai de l'\''aide sur le développement d'\''une API"
-    }
-  ],
-  "temperature": 1,
-  "max_tokens": 256,
-  "top_p": 1,
-  "frequency_penalty": 0,
-  "presence_penalty": 0
-}'
- * */
 // Create a curl post request
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "https://api.openai.com/v1/chat/completions");
